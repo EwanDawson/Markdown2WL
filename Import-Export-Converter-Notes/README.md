@@ -19,10 +19,10 @@ Potential Importers and Output Types:
 	- Association
 	- Dataset
 	- Notebook
-	- Table
-	- CodeBlock
-	- BlockQuote
-	- Headings
+	- Markdown Table
+	- Markdown CodeBlock
+	- Markdown BlockQuote
+	- Markdown Headings
 		- All
 		- Specific Level (1-6)
 
