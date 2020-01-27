@@ -70,8 +70,13 @@ Returns the result of ReadList on the markdown file. With the "Render" option: s
 
 #### Post Import
 "Dataset" :> Markdown`MarkdownImportToDataset,
+
 "Notebook" :> Markdown`MarkdownImportToNotebook,
+
 "Table" :> Markdown`MarkdownTableImport,
+
 "CodeBlock" :> Markdown`MarkdownCodeBlockImport,
+
 {"Headings", headingLevel_Integer} :> (Markdown`MarkdownImportHeadingAtLevel[headingLevel][##]&),
+
 "Headings" :> Markdown`MarkdownImportAllHeadings,
