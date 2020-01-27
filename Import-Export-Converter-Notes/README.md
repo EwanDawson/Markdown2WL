@@ -1,6 +1,6 @@
 # **Import-Export-Converter Notes**
 
-Potential conditional-functions
+Import-Export registration
 
 ```Mathematica
 ImportExport`RegisterImport[
