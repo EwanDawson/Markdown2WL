@@ -19,6 +19,7 @@ Potential Importers and Output Types:
 	- Association
 	- Dataset
 	- Notebook
+	- Styled Text
 	- Markdown Table
 	- Markdown CodeBlock
 	- Markdown BlockQuote
