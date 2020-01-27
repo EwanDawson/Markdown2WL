@@ -16,16 +16,18 @@ ImportExport`RegisterImport[
 		"h3" :> Markdown`MarkdownH3Import,
 		"h4" :> Markdown`MarkdownH4Import,
 		"h5" :> Markdown`MarkdownH5Import,
-		"h6" :> Markdown`MarkdownH6Import
+		"h6" :> Markdown`MarkdownH6Import,
+		...
 
 		(* DEFAULT IMPORTER *)
-		Markdown`MarkdownImport
+		Markdown`MarkdownDefaultImport
 		},
 
 		{
+			(* POST-IMPORTERS *)
 			"Dataset" :> Markdown`MarkdownDatasetImport,
 			"Notebook" :> Markdown`MarkdownNotebookImport,
-			"PDF" :> Markdown`MarkdownPDFImport,
+			...
 		}
 ]
 ```
