@@ -1,0 +1,42 @@
+# Symbolic Markdown Spec
+
+### Markdown Element
+- Plaintext
+	- Text
+		- MarkdownElement["Plaintext", {}, "Text"]
+- Headings
+ 	- \# \#\# \#\#\# \#\#\#\# \#\#\#\#\# \#\#\#\#\#\#
+		- MarkdownElement["H1", {}, "Text"]
+		- MarkdownElement["H2", {}, "Text"]
+		- MarkdownElement["H3", {}, "Text"]
+		- MarkdownElement["H4", {}, "Text"]
+		- MarkdownElement["H5", {}, "Text"]
+		- MarkdownElement["H6", {}, "Text"]
+- Italic
+	- \_text\_
+	- \*text\*
+		- MarkdownElement["Italic", {}, "Text"]
+- Bold
+	- \_text\_
+	- \*text\*
+		- MarkdownElement["Bold", {}, "Text"]
+- Unordered Item
+	- \* item
+	- \- item
+		- MarkdownElement["UnorderedItem", {}, "Text"]
+- Ordered Item
+	- n. item
+		- MarkdownElement["OrderedItem", {"ItemNumber" -> n}, "Text"]
+- Table
+	- MarkdownElement["Table", {}, {MarkdownElement["Row", ]}]
+- BlockQuote
+	- \>
+		- MarkdownElement["BlockQuote", {}, "Text"]
+- CodeBlock
+	- \`\`\`Language code\`\`\`
+		- MarkdownElement["CodeBlockStart", {}, "Text"]
+		- MarkdownElement["Language", {}, "Text"]
+		- MarkdownElement["CodeBlockEnd", {}, "Text"]
+- HorizontalLine
+	- \-\-\-\
+		- MarkdownElement["HorizontalLine", ]
