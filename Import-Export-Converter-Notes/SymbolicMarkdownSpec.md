@@ -38,5 +38,5 @@
 		- MarkdownElement["Language", {}, "Text"]
 		- MarkdownElement["CodeBlockEnd", {}, "Text"]
 - HorizontalLine
-	- \-\-\-\
-		- MarkdownElement["HorizontalLine", ]
+	- \-\-\-
+		- MarkdownElement["HorizontalLine", {}, "Text"]
