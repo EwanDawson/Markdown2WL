@@ -8,10 +8,10 @@ Markdown`MarkdownSymbolicImport[file_String] := {"Symbolic" -> MarkdownParse[fil
 
 (* TextGrid version of plaintext source *)
 
-MarkdownTextGridImport[filePathString_String] := Module[
+MarkdownTextGridImport[file_String] := Module[
   {
    lines =
-    markdownDefaultImport /* (StringSplit[#, "\n"] &)@filePathString,
+    markdownDefaultImport /* (StringSplit[#, "\n"] &)@file,
 		textGrid
    },
   textGrid = (Transpose /* TextGrid@{lines});
