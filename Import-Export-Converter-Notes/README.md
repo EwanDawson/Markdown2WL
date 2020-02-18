@@ -48,6 +48,7 @@ ImportExport`RegisterImport[
 	{
 		(*CONDITIONAL IMPORTER*)
 		(*DEFAULT IMPORTER*)
+		MarkdownDefaultImport
 		},
 
 		{

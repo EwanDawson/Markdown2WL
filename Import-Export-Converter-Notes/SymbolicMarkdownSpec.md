@@ -3,40 +3,38 @@
 ### Markdown Element
 - Plaintext
 	- Text
-		- MarkdownElement["Plaintext", {}, "Text"]
+		- "String of Characters"
 - Headings
  	- \# \#\# \#\#\# \#\#\#\# \#\#\#\#\# \#\#\#\#\#\#
-		- MarkdownElement["H1", {}, "Text"]
-		- MarkdownElement["H2", {}, "Text"]
-		- MarkdownElement["H3", {}, "Text"]
-		- MarkdownElement["H4", {}, "Text"]
-		- MarkdownElement["H5", {}, "Text"]
-		- MarkdownElement["H6", {}, "Text"]
+		- MarkdownElement["H1", "Text"]
+		- MarkdownElement["H2", "Text"]
+		- MarkdownElement["H3", "Text"]
+		- MarkdownElement["H4", "Text"]
+		- MarkdownElement["H5", "Text"]
+		- MarkdownElement["H6", "Text"]
 - Italic
 	- \_text\_
 	- \*text\*
-		- MarkdownElement["Italic", {}, "Text"]
+		- MarkdownElement[Italic, "Text"]
 - Bold
 	- \_text\_
 	- \*text\*
-		- MarkdownElement["Bold", {}, "Text"]
+		- MarkdownElement[Bold, "Text"]
 - Unordered Item
 	- \* item
 	- \- item
-		- MarkdownElement["UnorderedItem", {}, "Text"]
+		- MarkdownElement["Item", "Text"]
 - Ordered Item
 	- n. item
-		- MarkdownElement["OrderedItem", {"ItemNumber" -> n}, "Text"]
+		- MarkdownElement["ItemNumbered", {n}, "Text"]
 - Table
-	- MarkdownElement["Table", {}, {MarkdownElement["Row", ]}]
+	- Not Yet Implemented
 - BlockQuote
 	- \>
-		- MarkdownElement["BlockQuote", {}, "Text"]
+		- MarkdownElement["BlockQuote", "Text"]
 - CodeBlock
 	- \`\`\`Language code\`\`\`
-		- MarkdownElement["CodeBlockStart", {}, "Text"]
-		- MarkdownElement["Language", {}, "Text"]
-		- MarkdownElement["CodeBlockEnd", {}, "Text"]
+	- Not Yet Implemented
 - HorizontalLine
 	- \-\-\-
-		- MarkdownElement["HorizontalLine", {}, "Text"]
+		- MarkdownElement["HorizontalLine"]
