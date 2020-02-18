@@ -26,7 +26,7 @@ Markdown`MarkdownStyledTextGridImport[file_String] := Module[
    parsed2MD = MarkdownParse[file],
    mdRender, lines2TextGrid, styledTextGrid
    },
-  mdRender = parsed2MD /. MarkdownElement -> MarkdownRender;
+  mdRender = MarkdownRender[parsed2MD];
   lines2TextGrid =
    TextGrid[{If[ListQ[#], #, {#}]}, Spacings -> 0.25] & /@ mdRender;
   styledTextGrid = (Transpose /* TextGrid@{lines2TextGrid});
@@ -40,7 +40,7 @@ Markdown`MarkdownCellImport[file_String] := Module[
    parsed2MD = MarkdownParse[file],
    mdRender, unlist, cells
    },
-  mdRender = parsed2MD /. MarkdownElement -> MarkdownRender;
+  mdRender = MarkdownRender[parsed2MD];
   unlist = mdRender /. {x_} :> x;
   cells = (
      Which[
@@ -90,7 +90,7 @@ Markdown`MarkdownNotebookImport[file_String] := Module[
    parsed2MD = MarkdownParse[file],
    mdRender, unlist, cells
    },
-  mdRender = parsed2MD /. MarkdownElement -> MarkdownRender;
+  mdRender = MarkdownRender[parsed2MD];
   unlist = mdRender /. {x_} :> x;
   cells = (
      Which[
