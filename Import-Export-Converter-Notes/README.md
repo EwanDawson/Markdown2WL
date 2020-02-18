@@ -48,11 +48,15 @@ ImportExport`RegisterImport[
 	{
 		(*CONDITIONAL IMPORTER*)
 		(*DEFAULT IMPORTER*)
-		MarkdownDefaultImport
+		Markdown`MarkdownDefaultImport
 		},
 
 		{
 			(*POST-IMPORTERS*)
+			"Parsed" :> Markdown`MarkdownParse,
+			"Cells" :> Markdown`MarkdownCellImport,
+			"Embedded" :> Markdown`MarkdownCellPrintImport,
+			"Notebook" :> Markdown`MarkdownNotebookImport
 		}
 ]
 ```
