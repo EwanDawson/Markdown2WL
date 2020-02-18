@@ -2,7 +2,7 @@ Needs["MarkdownParse`"]
 Needs["MarkdownRender`"]
 
 (* Plaintext Source *)
-Markdown`MarkdownDefaultImport[file_String] := {"Source" -> ReadString[filePathString]}
+Markdown`MarkdownDefaultImport[file_String] := {"Source" -> ReadString[file]}
 
 Markdown`MarkdownSymbolicImport[file_String] := {"Symbolic" -> MarkdownParse[file]}
 
