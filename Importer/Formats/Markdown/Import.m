@@ -11,7 +11,6 @@ ImportExport`RegisterImport[
 
 		{
 			(*POST-IMPORTERS*)
-			"Parsed" :> Markdown`MarkdownParse,
 			"Cells" :> Markdown`MarkdownCellImport,
 			(*
 			"TextGrid" :> Markdown`MarkdownTextGridImport,
