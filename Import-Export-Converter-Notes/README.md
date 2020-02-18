@@ -60,3 +60,7 @@ ImportExport`RegisterImport[
 		}
 ]
 ```
+
+### Potential Workflow
+1. Script (?) that installs MarkdownParse and MarkdownRender, followed by the Import Converter files
+2. Import[xxxx.md, "Markdown"]
