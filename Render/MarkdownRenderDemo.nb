@@ -1,0 +1,1234 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     55720,       1226]
+NotebookOptionsPosition[     52050,       1156]
+NotebookOutlinePosition[     52541,       1174]
+CellTagsIndexPosition[     52498,       1171]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Markdown Render Demo", "Title",
+ CellChangeTimes->{{3.8171419824513073`*^9, 3.817142038258356*^9}, {
+  3.8171518236103163`*^9, 3.817151824855735*^9}, {3.81738939377347*^9, 
+  3.817389394039963*^9}, {3.8175900949091597`*^9, 
+  3.8175900954322147`*^9}},ExpressionUUID->"b7946855-acef-475d-bca3-\
+4f6aa5c9a07a"],
+
+Cell["Render a markdown file from Symbolic Markdown", "Abstract",
+ CellChangeTimes->{{3.817143427356176*^9, 3.817143447897683*^9}, {
+  3.817151831680346*^9, 3.817151846527404*^9}, {3.817389401145138*^9, 
+  3.8173894189436073`*^9}, {3.817416529510268*^9, 3.8174165378836927`*^9}, {
+  3.817590098055842*^9, 
+  3.817590102687565*^9}},ExpressionUUID->"41f6fde2-3312-478f-b2c8-\
+ff97b1cd3e62"],
+
+Cell["If you make any changes to either package, Quit the kernel", "Text",
+ CellChangeTimes->{{3.81741654043894*^9, 3.81741655636959*^9}, {
+  3.817416587431285*^9, 
+  3.8174165926333933`*^9}},ExpressionUUID->"ae62ea4f-43d4-4edf-903f-\
+316f87708814"],
+
+Cell["Quit the kernel", "CodeText",
+ CellChangeTimes->{{3.817416572733042*^9, 
+  3.81741657961834*^9}},ExpressionUUID->"fea4a3a1-ea63-4863-a1c5-\
+7652c6364503"],
+
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.817239754310732*^9, 3.8172397548456573`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"14e54866-d7f3-4f17-9074-d8f159484569"],
+
+Cell["Install the packages again from the Menu:", "Text",
+ CellChangeTimes->{{3.8174165987397127`*^9, 
+  3.8174166465563717`*^9}},ExpressionUUID->"f5f4754d-cb7f-445c-b6aa-\
+21d386c647ab"],
+
+Cell["File \[RightGuillemet] Install \[RightGuillemet] Source: \
+\[RightGuillemet] From File \[RightGuillemet] MarkdownParse.wl", "Item",
+ CellChangeTimes->{{3.8174166502870817`*^9, 3.817416663430006*^9}, {
+  3.817592608621492*^9, 
+  3.817592608621792*^9}},ExpressionUUID->"1b196ee9-d5d1-46dc-8ca0-\
+049537859d6f"],
+
+Cell["File \[RightGuillemet] Install \[RightGuillemet] Source: \
+\[RightGuillemet] From File \[RightGuillemet] MarkdownRender.wl", "Item",
+ CellChangeTimes->{{3.8174166502870817`*^9, 3.817416663430006*^9}, {
+  3.8175926090145283`*^9, 
+  3.817592612757217*^9}},ExpressionUUID->"ae8b6cd5-07e9-4285-b54f-\
+b50654985c8c"],
+
+Cell["\<\
+File \[RightGuillemet] Install \[RightGuillemet] Source: \[RightGuillemet] \
+From File \[RightGuillemet] MarkdownRenderTests.wl\
+\>", "Item",
+ CellChangeTimes->{{3.8174166502870817`*^9, 3.817416672781804*^9}, {
+  3.817591413479518*^9, 
+  3.817591418655621*^9}},ExpressionUUID->"328c2086-ad04-4777-8fca-\
+349330ab56d6"],
+
+Cell["Then load all packages", "Text",
+ CellChangeTimes->{{3.817416682510375*^9, 3.817416699263093*^9}, {
+  3.817592600187792*^9, 
+  3.817592603868648*^9}},ExpressionUUID->"4d05c24d-9b3c-450e-8869-\
+e15918e4ea41"],
+
+Cell["\<\
+Load MarkdownParse`,  MarkdownRender` and MarkdownRenderTests`\
+\>", "CodeText",
+ CellChangeTimes->{{3.817416703236124*^9, 3.8174167184738827`*^9}, {
+   3.817590145150484*^9, 3.817590156096901*^9}, 
+   3.817594809080531*^9},ExpressionUUID->"8d0676c6-1170-4ab4-9427-\
+52aa2d5bd45e"],
+
+Cell[BoxData[{
+ RowBox[{"<<", "MarkdownParse`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "MarkdownRender`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "MarkdownRenderTests`"}]}], "Input",
+ CellChangeTimes->{{3.8173894419985743`*^9, 3.817389449012609*^9}, {
+   3.817400278748639*^9, 3.817400278970948*^9}, {3.817400599844329*^9, 
+   3.817400601576033*^9}, 3.817400736848119*^9, {3.817590114957964*^9, 
+   3.817590129208173*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"512dcb97-052f-434b-86d0-eedcfeef80ee"],
+
+Cell[CellGroupData[{
+
+Cell["MarkdownRender", "Section",
+ CellChangeTimes->{{3.817338277638526*^9, 3.817338278738536*^9}, {
+  3.8173898921331472`*^9, 3.81738989401423*^9}, {3.817590163807357*^9, 
+  3.817590164385808*^9}},ExpressionUUID->"ed8a7d53-f2bf-4ccf-ac2c-\
+0bb641bd7da7"],
+
+Cell["Displayed below are supported MarkdownStyles", "Text",
+ CellChangeTimes->{{3.81738963956112*^9, 3.817389648583658*^9}, {
+  3.817590171209078*^9, 
+  3.81759017410524*^9}},ExpressionUUID->"f351d147-2c71-4e75-8503-\
+4812d9fd3995"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["TestStyler", "Section",
+ CellChangeTimes->{{3.8173900544830027`*^9, 3.817390057057209*^9}, {
+  3.817590206922917*^9, 3.817590209633884*^9}, {3.817592705583325*^9, 
+  3.817592708615172*^9}},ExpressionUUID->"b146c287-093e-4ce4-bf8b-\
+fc1c63394988"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["MarkdownStylerTestReport"], "Input",
+ CellChangeTimes->{{3.817590229730591*^9, 3.8175902302911577`*^9}, {
+  3.8175927128691053`*^9, 3.8175927134719276`*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"6f9dcc92-bd17-4872-a306-71c269a07483"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["TestReportObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              InsetBox[
+               BoxData[
+                FormBox[
+                 PaneBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitExpressions", "SuccessIcon"]], Alignment -> Center, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], TraditionalForm]]]}, 
+             PlotRange -> {{0, 1}, {0, 1}}, Background -> GrayLevel[0.93], 
+             Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Title: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["Automatic", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TemplateBox[{"100", "\"%\""}, "RowDefault"], 
+                  "SummaryItem"]}], 
+               RowBox[{
+                 TagBox["\"Tests run: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["7", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              InsetBox[
+               BoxData[
+                FormBox[
+                 PaneBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitExpressions", "SuccessIcon"]], Alignment -> Center, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], TraditionalForm]]]}, 
+             PlotRange -> {{0, 1}, {0, 1}}, Background -> GrayLevel[0.93], 
+             Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Title: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["Automatic", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TemplateBox[{"100", "\"%\""}, "RowDefault"], 
+                  "SummaryItem"]}], 
+               RowBox[{
+                 TagBox["\"Tests run: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["7", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Succeeded: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["7", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Failed: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox[
+                 "\"Failed with wrong results: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox[
+                 "\"Failed with messages: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Failed with errors: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Time elapsed: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "0.0008150000000000001`2.2165745665577137", "\"s\"", 
+                    "seconds", "\"Seconds\""}, "Quantity", SyntaxForm -> Mod],
+                   "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  TestReportObject[
+   Association[
+   "Title" -> Automatic, "TestResults" -> Association[1 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 43, "TestID" -> "H1StyleTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           Private`ToMarkdownStyle[
+            MarkdownParse`MarkdownElement["H1", "A Title"]]], 
+         "ExpectedOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Title", "Title"]], "ActualOutput" -> 
+         HoldForm[
+           MarkdownRender`MarkdownStyle["A Title", "Title"]], 
+         "ExpectedMessages" -> {}, "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000125`2.2474250108400504, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.0001249999999988205, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 2 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 44, "TestID" -> "H2StyleTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           Private`ToMarkdownStyle[
+            MarkdownParse`MarkdownElement["H2", "A Subtitle"]]], 
+         "ExpectedOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Subtitle", "Subtitle"]], 
+         "ActualOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Subtitle", "Subtitle"]], 
+         "ExpectedMessages" -> {}, "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.0001`2.150514997831994, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.0001010000000007949, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 3 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 45, "TestID" -> "H3StyleTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           Private`ToMarkdownStyle[
+            MarkdownParse`MarkdownElement["H3", "A Chapter"]]], 
+         "ExpectedOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Chapter", "Chapter"]], 
+         "ActualOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Chapter", "Chapter"]], 
+         "ExpectedMessages" -> {}, "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000099`2.146150192429544, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00009699999999845943, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 4 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 46, "TestID" -> "H4StyleTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           Private`ToMarkdownStyle[
+            MarkdownParse`MarkdownElement["H4", "A Section"]]], 
+         "ExpectedOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Section", "Section"]], 
+         "ActualOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Section", "Section"]], 
+         "ExpectedMessages" -> {}, "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000159`2.351912122152445, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.0001449999999998397, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 5 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 47, "TestID" -> "H5StyleTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           Private`ToMarkdownStyle[
+            MarkdownParse`MarkdownElement["H5", "A Subsection"]]], 
+         "ExpectedOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Subsection", "Subsection"]], 
+         "ActualOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Subsection", "Subsection"]], 
+         "ExpectedMessages" -> {}, "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000115`2.2112128381856055, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00011400000000172383`, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 6 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 48, "TestID" -> "H6StyleTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           Private`ToMarkdownStyle[
+            MarkdownParse`MarkdownElement["H6", "A Subsubsection"]]], 
+         "ExpectedOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Subsubsection", "Subsubsection"]], 
+         "ActualOutput" -> HoldForm[
+           MarkdownRender`MarkdownStyle["A Subsubsection", "Subsubsection"]], 
+         "ExpectedMessages" -> {}, "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000109`2.1879414957726175, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00010800000000088517`, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 7 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 49, "TestID" -> "HNStyleTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           Private`ToMarkdownStyle["####### A Paragraph"]], "ExpectedOutput" -> 
+         HoldForm["####### A Paragraph"], "ActualOutput" -> 
+         HoldForm["####### A Paragraph"], "ExpectedMessages" -> {}, 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000108`2.1839387533189436, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00010800000000088517`, "Seconds"], "MemoryUsed" -> 
+         Quantity[64, "Bytes"]]]], 
+    "TestsSucceededIndices" -> {1, 2, 3, 4, 5, 6, 7}, 
+    "TestsFailedIndices" -> {}, "TestsFailedWrongResultsIndices" -> {}, 
+    "TestsFailedWithMessagesIndices" -> {}, 
+    "TestsFailedWithErrorsIndices" -> {}, "TimeElapsed" -> 
+    Quantity[0.0008150000000000001`2.2165745665577137, "Seconds"], 
+    "TestsSucceededCount" -> 7, "TestsFailedCount" -> 0, 
+    "TestsFailedWrongResultsCount" -> 0, "TestsFailedWithMessagesCount" -> 0, 
+    "TestsFailedWithErrorsCount" -> 0, "Aborted" -> False]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.8174008136611767`*^9, 3.817401152460236*^9, 3.817401241897089*^9, 
+   3.817402028462184*^9, 3.817402149729344*^9, 3.817403044999468*^9, 
+   3.817403696940302*^9, 3.817404405960877*^9, 3.817404673217423*^9, 
+   3.817404955073332*^9, 3.8174050804456463`*^9, 3.817405247723938*^9, 
+   3.817406680808765*^9, 3.817407198009918*^9, 3.8174073380054817`*^9, 
+   3.817407414214032*^9, 3.817407725839857*^9, 3.81740782708727*^9, {
+   3.817408007803053*^9, 3.817408017608252*^9}, 3.817408128236597*^9, 
+   3.817408242664405*^9, 3.817408784361092*^9, 3.81740888003762*^9, 
+   3.817409074224102*^9, 3.817409735770149*^9, 3.817410256332746*^9, 
+   3.81741064876921*^9, 3.817410756594335*^9, 3.8174108194654293`*^9, 
+   3.8174125574113617`*^9, 3.8174126106814404`*^9, 3.8174129451331253`*^9, 
+   3.817413163046644*^9, 3.817413505565199*^9, 3.817413647393132*^9, 
+   3.817413740261161*^9, 3.817413987525134*^9, 3.817414184435028*^9, 
+   3.817414459927204*^9, 3.8174145345787983`*^9, 3.8174157551387587`*^9, 
+   3.8174159839662447`*^9, 3.817416073446569*^9, 3.8174164180390863`*^9, 
+   3.817591939985079*^9, 3.8175927731422*^9, 3.8175931048909693`*^9, 
+   3.817593214391498*^9, 3.817593304806123*^9, 3.817593810305422*^9, 
+   3.817594191604184*^9, 3.817594585404511*^9, 3.817594775901723*^9, 
+   3.817595097417461*^9, 3.8175957008889637`*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"20738795-42c3-465e-a991-e35f396b7213"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["TestRender", "Section",
+ CellChangeTimes->{{3.817595765442211*^9, 
+  3.817595768130116*^9}},ExpressionUUID->"0fdb258a-ff70-4af1-8a81-\
+24a0aa7fa9da"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["MarkdownRenderTestReport"], "Input",
+ CellChangeTimes->{{3.8175957748303947`*^9, 3.817595777435368*^9}},
+ CellLabel->"In[47]:=",ExpressionUUID->"afda91bf-4c10-4cb6-a8c1-183c97c26624"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["TestReportObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = True, Typeset`embedState$$ = "Ready"}, 
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              InsetBox[
+               BoxData[
+                FormBox[
+                 PaneBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitExpressions", "SuccessIcon"]], Alignment -> Center, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], TraditionalForm]]]}, 
+             PlotRange -> {{0, 1}, {0, 1}}, Background -> GrayLevel[0.93], 
+             Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Title: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["Automatic", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TemplateBox[{"100", "\"%\""}, "RowDefault"], 
+                  "SummaryItem"]}], 
+               RowBox[{
+                 TagBox["\"Tests run: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["7", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              InsetBox[
+               BoxData[
+                FormBox[
+                 PaneBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitExpressions", "SuccessIcon"]], Alignment -> Center, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], TraditionalForm]]]}, 
+             PlotRange -> {{0, 1}, {0, 1}}, Background -> GrayLevel[0.93], 
+             Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Title: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["Automatic", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TemplateBox[{"100", "\"%\""}, "RowDefault"], 
+                  "SummaryItem"]}], 
+               RowBox[{
+                 TagBox["\"Tests run: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["7", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Succeeded: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["7", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Failed: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox[
+                 "\"Failed with wrong results: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox[
+                 "\"Failed with messages: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Failed with errors: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Time elapsed: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "0.0010110000000000001`2.310168113408738", "\"s\"", 
+                    "seconds", "\"Seconds\""}, "Quantity", SyntaxForm -> Mod],
+                   "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  TestReportObject[
+   Association[
+   "Title" -> Automatic, "TestResults" -> Association[1 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 50, "TestID" -> "H1RenderTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           MarkdownRender`MarkdownRender[
+            MarkdownParse`MarkdownElement["H1", "A Title"]]], 
+         "ExpectedOutput" -> HoldForm[
+           Style["A Title", "Title"]], "ActualOutput" -> HoldForm[
+           Style["A Title", "Title"]], "ExpectedMessages" -> {}, 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000157`2.3464146502412278, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00012599999999984846`, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 2 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 51, "TestID" -> "H2RenderTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           MarkdownRender`MarkdownRender[
+            MarkdownParse`MarkdownElement["H2", "A Subtitle"]]], 
+         "ExpectedOutput" -> HoldForm[
+           Style["A Subtitle", "Subtitle"]], "ActualOutput" -> HoldForm[
+           Style["A Subtitle", "Subtitle"]], "ExpectedMessages" -> {}, 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000104`2.1675483371307744, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00010400000000210241`, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 3 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 52, "TestID" -> "H3RenderTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           MarkdownRender`MarkdownRender[
+            MarkdownParse`MarkdownElement["H3", "A Chapter"]]], 
+         "ExpectedOutput" -> HoldForm[
+           Style["A Chapter", "Chapter"]], "ActualOutput" -> HoldForm[
+           Style["A Chapter", "Chapter"]], "ExpectedMessages" -> {}, 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000205`2.462268858887748, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00017099999999814486`, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 4 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 53, "TestID" -> "H4RenderTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           MarkdownRender`MarkdownRender[
+            MarkdownParse`MarkdownElement["H4", "A Section"]]], 
+         "ExpectedOutput" -> HoldForm[
+           Style["A Section", "Section"]], "ActualOutput" -> HoldForm[
+           Style["A Section", "Section"]], "ExpectedMessages" -> {}, 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000206`2.4643822182011474, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00017599999999973193`, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 5 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 54, "TestID" -> "H5RenderTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           MarkdownRender`MarkdownRender[
+            MarkdownParse`MarkdownElement["H5", "A Subsection"]]], 
+         "ExpectedOutput" -> HoldForm[
+           Style["A Subsection", "Subsection"]], "ActualOutput" -> HoldForm[
+           Style["A Subsection", "Subsection"]], "ExpectedMessages" -> {}, 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.00012`2.2296962438796184, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00011999999999900979`, "Seconds"], "MemoryUsed" -> 
+         Quantity[176, "Bytes"]]], 6 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 55, "TestID" -> "H6RenderTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           MarkdownRender`MarkdownRender[
+            MarkdownParse`MarkdownElement["H6", "A Subsubsection"]]], 
+         "ExpectedOutput" -> HoldForm[
+           Style["A Subsubsection", "Subsubsection"]], "ActualOutput" -> 
+         HoldForm[
+           Style["A Subsubsection", "Subsubsection"]], 
+         "ExpectedMessages" -> {}, "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000116`2.2149729870589128, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00011299999999891952`, "Seconds"], "MemoryUsed" -> 
+         Quantity[120, "Bytes"]]], 7 -> TestResultObject[
+        Association[
+        "TestClass" -> None, "TestIndex" -> 56, "TestID" -> "HNStyleTest", 
+         "Outcome" -> "Success", "Input" -> HoldForm[
+           MarkdownRender`MarkdownRender["####### A Paragraph"]], 
+         "ExpectedOutput" -> HoldForm["####### A Paragraph"], "ActualOutput" -> 
+         HoldForm["####### A Paragraph"], "ExpectedMessages" -> {}, 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         Quantity[0.000103`2.163352222537166, "Seconds"], "CPUTimeUsed" -> 
+         Quantity[0.00009999999999976694, "Seconds"], "MemoryUsed" -> 
+         Quantity[64, "Bytes"]]]], 
+    "TestsSucceededIndices" -> {1, 2, 3, 4, 5, 6, 7}, 
+    "TestsFailedIndices" -> {}, "TestsFailedWrongResultsIndices" -> {}, 
+    "TestsFailedWithMessagesIndices" -> {}, 
+    "TestsFailedWithErrorsIndices" -> {}, "TimeElapsed" -> 
+    Quantity[0.0010110000000000001`2.310168113408738, "Seconds"], 
+    "TestsSucceededCount" -> 7, "TestsFailedCount" -> 0, 
+    "TestsFailedWrongResultsCount" -> 0, "TestsFailedWithMessagesCount" -> 0, 
+    "TestsFailedWithErrorsCount" -> 0, "Aborted" -> False]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.817595803033552*^9},
+ CellLabel->"Out[47]=",ExpressionUUID->"dac159a6-fdda-4ba9-bd14-973e646a41e9"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MarkdownRender Example", "Section",
+ CellChangeTimes->{{3.817157345279163*^9, 3.817157346203492*^9}, {
+  3.817247877462327*^9, 3.8172478784352083`*^9}, {3.817390041738125*^9, 
+  3.8173900486844187`*^9}, {3.817590197658396*^9, 
+  3.817590198178565*^9}},ExpressionUUID->"b3b2a78c-44c3-460b-86ab-\
+b0b33931b39c"],
+
+Cell[CellGroupData[{
+
+Cell["Snippets", "Subsection",
+ CellChangeTimes->{{3.817595788723042*^9, 
+  3.817595791514461*^9}},ExpressionUUID->"e31b9a0b-3694-415f-b57b-\
+6df6be9b9eb1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MarkdownRender", "[", 
+  RowBox[{"MarkdownElement", "[", 
+   RowBox[{"\"\<H1\>\"", ",", "\"\<This is a title\>\""}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.817593471661358*^9, 3.817593503645919*^9}, {
+  3.8175943267681017`*^9, 3.8175943292707977`*^9}, {3.817594399284996*^9, 
+  3.8175944006966257`*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"5addcaa4-11a1-472b-a741-60afd0208501"],
+
+Cell[BoxData[
+ StyleBox["\<\"This is a title\"\>", "Title",
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.817593494295492*^9, 3.817593504234082*^9}, 
+   3.817593705785487*^9, 3.817593804878313*^9, 3.817593988619337*^9, 
+   3.817594185702179*^9, {3.817594322853636*^9, 3.817594329693276*^9}, {
+   3.817594396391177*^9, 3.817594401214917*^9}, 3.8175946374371023`*^9, 
+   3.817594816075617*^9, 3.817594924260051*^9, 3.8175951275997677`*^9, 
+   3.817595709517817*^9},
+ CellLabel->"Out[45]=",ExpressionUUID->"65aae349-6d3c-4ae6-b3d5-bd8d6c9f7615"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MarkdownRender", "[", "\"\<a plain string\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.817595147434814*^9, 3.817595150746667*^9}},
+ CellLabel->"In[46]:=",ExpressionUUID->"bf68f7e5-7d6f-4b49-b009-a6f9f01a11ce"],
+
+Cell[BoxData["\<\"a plain string\"\>"], "Output",
+ CellChangeTimes->{3.817595151141252*^9, 3.817595718110971*^9},
+ CellLabel->"Out[46]=",ExpressionUUID->"33479bd6-44e5-4517-b13c-e93a7e58b2f8"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["File", "Subsection",
+ CellChangeTimes->{{3.8175957934598722`*^9, 
+  3.8175957937788*^9}},ExpressionUUID->"a302334d-33e7-4cc4-9be0-65a26496a274"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"filePath", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<test.md\>\""}], 
+     "}"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.817157386713378*^9, 3.8171573913109007`*^9}, {
+   3.8171576698438787`*^9, 3.817157677964739*^9}, {3.8171579362492723`*^9, 
+   3.817157937214015*^9}, {3.8172366531060762`*^9, 3.8172366534588127`*^9}, 
+   3.817330653594535*^9, {3.81738967309939*^9, 3.817389685568739*^9}, {
+   3.8173897935513268`*^9, 3.817389831975668*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"eb165041-5cf3-44fe-84d0-1ed19d05bc91"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"mdp", "=", 
+   RowBox[{"MarkdownParse", "[", "filePath", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8171574516945753`*^9, 3.8171574533133087`*^9}, 
+   3.817157496095817*^9, 3.817157920467078*^9, {3.817170402743977*^9, 
+   3.8171704049186897`*^9}, 3.8172358431384687`*^9, {3.817240946833456*^9, 
+   3.81724094888334*^9}, 3.8172413585269203`*^9, {3.81734384974724*^9, 
+   3.817343850827291*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"eacdcb92-3bd4-49f3-8e4a-d8e4f3c127e1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{"mdp", ",", 
+   RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.817333311218748*^9, 3.817333316916204*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"81c3bc60-b0c4-414c-a59a-0ad5ebeb3a3c"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H1\"\>", ",", "\<\"An exhibit of Markdown\"\>"}], "]"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"\<\"This note demonstrates some of what\"\>", ",", 
+       RowBox[{"MarkdownElement", "[", 
+        RowBox[{
+        "Hyperlink", ",", "\<\"Markdown\"\>", 
+         ",", "\<\" http://daringfireball.net/projects/markdown/\"\>"}], 
+        "]"}], ",", "\<\" is capable of doing.\"\>"}], "}"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{
+      "Italic", 
+       ",", "\<\"Note: Feel free to play with this page. Unlike regular \
+notes, this doesn't automatically save itself.\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H2\"\>", ",", "\<\"Basic formatting\"\>"}], "]"}]},
+    {"\<\"Write Paragraphs like so. A paragraph is the basic block of \
+Markdown. A paragraph is what text will turn into when there is no reason it \
+should become anything else.\"\>"},
+    {
+     RowBox[{"{", 
+      RowBox[{"\<\"Blank lines separate paragraphs. Markdown supports \"\>", 
+       ",", 
+       RowBox[{"MarkdownElement", "[", 
+        RowBox[{"Italic", ",", "\<\"italic\"\>"}], "]"}], 
+       ",", "\<\" and \"\>", ",", 
+       RowBox[{"MarkdownElement", "[", 
+        RowBox[{"Bold", ",", "\<\"bold\"\>"}], "]"}], 
+       ",", "\<\" formatting.\"\>"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"\<\"Lines can have nested styling as well, like \"\>", ",", 
+       RowBox[{"MarkdownElement", "[", 
+        RowBox[{"Italic", ",", 
+         RowBox[{"{", 
+          RowBox[{"\<\"a \"\>", ",", 
+           RowBox[{"MarkdownElement", "[", 
+            RowBox[{"Bold", ",", "\<\"bold\"\>"}], "]"}], 
+           ",", "\<\" in an italic\"\>"}], "}"}]}], "]"}], ",", "\<\".\"\>"}],
+       "}"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H2\"\>", ",", "\<\"Lists\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H3\"\>", ",", "\<\"Ordered list\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"ItemNumbered\"\>", ",", 
+       RowBox[{"{", "1", "}"}], ",", "\<\"Item 1\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"ItemNumbered\"\>", ",", 
+       RowBox[{"{", "2", "}"}], ",", "\<\"A second item\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"ItemNumbered\"\>", ",", 
+       RowBox[{"{", "3", "}"}], ",", "\<\"Number 3\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"ItemNumbered\"\>", ",", 
+       RowBox[{"{", "4", "}"}], ",", "\<\"\:2163\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"Italic", ",", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Note: the fourth item uses the Unicode character \
+for\"\>", ",", 
+         RowBox[{"MarkdownElement", "[", 
+          RowBox[{
+          "Hyperlink", ",", "\<\"Roman numeral four\"\>", 
+           ",", "\<\" \
+http://www.fileformat.info/info/unicode/char/2163/index.htm\"\>"}], "]"}], 
+         ",", "\<\".\"\>"}], "}"}]}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H3\"\>", ",", "\<\"Unordered list\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"Item\"\>", ",", "\<\"An item\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"Item\"\>", ",", "\<\"Another item\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"Item\"\>", ",", "\<\"Yet another item\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"Item\"\>", ",", "\<\"And there's more...\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H2\"\>", ",", "\<\"Paragraph modifiers\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H3\"\>", ",", "\<\"Code block\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"CodeBlock\"\>", ",", 
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"Language\"\>", "\[Rule]", "\<\"None\"\>"}], ",", 
+         RowBox[{"\<\"Body\"\>", 
+          "\[Rule]", "\<\"Code blocks are useful for people who look at code \
+or for clarity of plain text content. As you can see, it uses a fixed-width \
+font.\"\>"}]}], "\[RightAssociation]"}]}], "]"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"\<\"You can also make \"\>", ",", 
+       RowBox[{"MarkdownElement", "[", 
+        RowBox[{"\<\"InlineCode\"\>", ",", "\<\"inline code\"\>"}], "]"}], 
+       ",", "\<\" to add insert code block formatting anywhere.\"\>"}], "}"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H3\"\>", ",", "\<\"Quote\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"BlockQuote\"\>", 
+       ",", "\<\"Here is a quote. What this is should be self explanatory. \
+Quotes are automatically indented when they are used.\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H2\"\>", ",", "\<\"Headings\"\>"}], "]"}]},
+    {"\<\"Markdown supports six levels of headings; corresponding with the \
+six levels of HTML headings. You've probably noticed them already in the \
+page. Each level down uses one more hash character.\"\>"},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H3\"\>", ",", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Headings \"\>", ",", 
+         RowBox[{"MarkdownElement", "[", 
+          RowBox[{"Italic", ",", "\<\"can\"\>"}], "]"}], 
+         ",", "\<\" also contain \"\>", ",", 
+         RowBox[{"MarkdownElement", "[", 
+          RowBox[{"Bold", ",", "\<\"formatting\"\>"}], "]"}]}], "}"}]}], 
+      "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H3\"\>", ",", 
+       RowBox[{"{", 
+        RowBox[{"\<\"They can even contain \"\>", ",", 
+         RowBox[{"MarkdownElement", "[", 
+          RowBox[{"\<\"InlineCode\"\>", ",", "\<\"inline code\"\>"}], "]"}]}],
+         "}"}]}], "]"}]},
+    {"\<\"Of course, demonstrating what headings look like messes up the \
+structure of the page.\"\>"},
+    {"\<\"I don't recommend using more than three or four levels of headings \
+here, because, when you're smallest heading isn't too small, and you're \
+largest heading isn't too big, and you want each size up to look noticeably \
+larger and more important, there aren't any other sizes to choose \
+from.\"\>"},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H2\"\>", ",", "\<\"LaTex\"\>"}], "]"}]},
+    {"\<\"LaTex is also supported:\"\>"},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"Item\"\>", ",", "\<\"inline\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"LaTex\"\>", ",", 
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"Inline\"\>"}], ",", 
+         RowBox[{"\<\"Body\"\>", "\[Rule]", "\<\"a^2 + b^2 = c^2\"\>"}]}], 
+        "\[RightAssociation]"}]}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"LaTex\"\>", ",", 
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"Inline\"\>"}], ",", 
+         RowBox[{"\<\"Body\"\>", "\[Rule]", "\<\" a^2 + b^2 = c^2 \"\>"}]}], 
+        "\[RightAssociation]"}]}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"Item\"\>", ",", "\<\"presented\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"LaTex\"\>", ",", 
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"Display\"\>"}], ",", 
+         RowBox[{"\<\"Body\"\>", "\[Rule]", "\<\"a^n + b^n = c^n\"\>"}]}], 
+        "\[RightAssociation]"}]}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"LaTex\"\>", ",", 
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"Type\"\>", "\[Rule]", "\<\"Display\"\>"}], ",", 
+         RowBox[{"\<\"Body\"\>", "\[Rule]", "\<\" a^2 + b^2 = c^2 \"\>"}]}], 
+        "\[RightAssociation]"}]}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H2\"\>", ",", "\<\"URLs\"\>"}], "]"}]},
+    {"\<\"Add hyperlinks in the following ways:\"\>"},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"Item\"\>", ",", 
+       RowBox[{"{", 
+        RowBox[{"\<\"A named link to\"\>", ",", 
+         RowBox[{"MarkdownElement", "[", 
+          RowBox[{
+          "Hyperlink", ",", "\<\"MarkItDown\"\>", 
+           ",", "\<\" http://www.markitdown.net/\"\>"}], "]"}], 
+         ",", "\<\". The easiest way to do these is to select what you want \
+to make a link and hit \"\>", ",", 
+         RowBox[{"MarkdownElement", "[", 
+          RowBox[{"\<\"InlineCode\"\>", ",", "\<\"Ctrl+L\"\>"}], "]"}], 
+         ",", "\<\".\"\>"}], "}"}]}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"Item\"\>", ",", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Another named link to\"\>", ",", 
+         RowBox[{"MarkdownElement", "[", 
+          RowBox[{"Hyperlink", ",", 
+           RowBox[{"\[LeftAssociation]", 
+            RowBox[{
+             RowBox[{"\<\"Label\"\>", "\[Rule]", "\<\"MarkItDown\"\>"}], ",", 
+             
+             
+             RowBox[{"\<\"Link\"\>", 
+              "\[Rule]", "\<\"http://www.markitdown.net/\"\>"}]}], 
+            "\[RightAssociation]"}]}], "]"}]}], "}"}]}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"Item\"\>", ",", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Sometimes you want the URL : \"\>", ",", 
+         RowBox[{"MarkdownElement", "[", 
+          RowBox[{"Hyperlink", ",", 
+           RowBox[{"\[LeftAssociation]", 
+            
+            RowBox[{"\<\"Link\"\>", 
+             "\[Rule]", "\<\"http://www.markitdown.net/\"\>"}], 
+            "\[RightAssociation]"}]}], "]"}], ",", "\<\".\"\>"}], "}"}]}], 
+      "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H2\"\>", ",", "\<\"Horizontal rule\"\>"}], "]"}]},
+    {"\<\"A horizontal rule is a dividing line drawn across the page, useful \
+for separating blocks of text.\"\>"},
+    {
+     RowBox[{"MarkdownElement", "[", "\<\"HorizontalLine\"\>", "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H2\"\>", ",", "\<\"Tables\"\>"}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"Table\"\>", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"MarkdownElement", "[", 
+          RowBox[{"\<\"TableHeader\"\>", ",", 
+           RowBox[{"{", 
+            
+            RowBox[{"\<\"Markdown \"\>", ",", "\<\" Less \"\>", 
+             ",", "\<\" Pretty\"\>"}], "}"}]}], "]"}], ",", 
+         RowBox[{"MarkdownElement", "[", 
+          RowBox[{"\<\"TableAlignment\"\>", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "Center", "}"}], ",", 
+             RowBox[{"{", "Center", "}"}], ",", 
+             RowBox[{"{", "Center", "}"}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"MarkdownElement", "[", 
+            RowBox[{"\<\"TableRow\"\>", ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"MarkdownElement", "[", 
+                  RowBox[{"Italic", ",", "\<\"Still\"\>"}], "]"}], 
+                 ",", "\<\" \"\>"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\" \"\>", ",", 
+                 RowBox[{"MarkdownElement", "[", 
+                  RowBox[{"\<\"InlineCode\"\>", ",", "\<\"renders\"\>"}], 
+                  "]"}], ",", "\<\" \"\>"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\" \"\>", ",", 
+                 RowBox[{"MarkdownElement", "[", 
+                  RowBox[{"Bold", ",", "\<\"nicely\"\>"}], "]"}]}], "}"}]}], 
+              "}"}]}], "]"}], ",", 
+           RowBox[{"MarkdownElement", "[", 
+            RowBox[{"\<\"TableRow\"\>", ",", 
+             RowBox[{"{", 
+              RowBox[{"\<\"1 \"\>", ",", "\<\" 2 \"\>", ",", "\<\" 3\"\>"}], 
+              "}"}]}], "]"}]}], "}"}]}], "}"}]}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H2\"\>", ",", "\<\"Images\"\>"}], "]"}]},
+    {"\<\"Markdown can also contain images.\"\>"},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"Hyperlink", ",", 
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"AltText\"\>", 
+          "\[Rule]", "\<\"Streetview of Palm Trees by Brandon Erlinger-Ford\"\
+\>"}], ",", 
+         RowBox[{"\<\"Link\"\>", 
+          "\[Rule]", \
+"\<\"https://images.unsplash.com/photo-1564889998041-0dacc0706a0f?ixid=\
+MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=\
+crop&w=564&q=80\"\>"}]}], "\[RightAssociation]"}]}], "]"}]},
+    {
+     RowBox[{"MarkdownElement", "[", 
+      RowBox[{"\<\"H2\"\>", ",", "\<\"Last\"\>"}], "]"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"\<\"There's actually a lot more to Markdown than this. See the \
+official\"\>", ",", 
+       RowBox[{"MarkdownElement", "[", 
+        RowBox[{
+        "Hyperlink", ",", "\<\"introduction\"\>", 
+         ",", "\<\" http://daringfireball.net/projects/markdown/basics\"\>"}],
+         "]"}], ",", "\<\" and\"\>", ",", 
+       RowBox[{"MarkdownElement", "[", 
+        RowBox[{
+        "Hyperlink", ",", "\<\"syntax\"\>", 
+         ",", "\<\" http://daringfireball.net/projects/markdown/syntax\"\>"}],
+         "]"}], ",", "\<\" for more information. Be aware that this document \
+is not using the official implementation, and there may be subtle differences \
+in rendering on other platforms.\"\>"}], "}"}]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{3.817333317567844*^9, 3.817336356679491*^9, 
+  3.817337444405984*^9, 3.817337578187777*^9, 3.8173402117217703`*^9, 
+  3.8173405751737423`*^9, 3.817340858239677*^9, 3.817341038270464*^9, 
+  3.8173420586857357`*^9, 3.817342237287958*^9, 3.817342402189083*^9, 
+  3.8173426293798943`*^9, 3.817343093474086*^9, 3.8173437104903793`*^9, 
+  3.8173438533165483`*^9, 3.8173441277293653`*^9, 3.817344883363161*^9, 
+  3.817345144885262*^9, 3.8173454763293324`*^9, 3.817346050239132*^9, 
+  3.81734662850709*^9, 3.817346763411755*^9, 3.817389840621285*^9, 
+  3.8174164489123363`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"80983d5b-79cc-41b1-b3ea-8ac508483630"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{960, 471},
+WindowMargins->{{0, Automatic}, {Automatic, 218}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8d50ee89-b21a-4478-819f-93f53d329c6e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 314, 5, 98, "Title",ExpressionUUID->"b7946855-acef-475d-bca3-4f6aa5c9a07a"],
+Cell[897, 29, 388, 6, 62, "Abstract",ExpressionUUID->"41f6fde2-3312-478f-b2c8-ff97b1cd3e62"],
+Cell[1288, 37, 249, 4, 35, "Text",ExpressionUUID->"ae62ea4f-43d4-4edf-903f-316f87708814"],
+Cell[1540, 43, 160, 3, 38, "CodeText",ExpressionUUID->"fea4a3a1-ea63-4863-a1c5-7652c6364503"],
+Cell[1703, 48, 177, 2, 30, "Input",ExpressionUUID->"14e54866-d7f3-4f17-9074-d8f159484569"],
+Cell[1883, 52, 187, 3, 35, "Text",ExpressionUUID->"f5f4754d-cb7f-445c-b6aa-21d386c647ab"],
+Cell[2073, 57, 314, 5, 32, "Item",ExpressionUUID->"1b196ee9-d5d1-46dc-8ca0-049537859d6f"],
+Cell[2390, 64, 317, 5, 32, "Item",ExpressionUUID->"ae8b6cd5-07e9-4285-b54f-b50654985c8c"],
+Cell[2710, 71, 328, 7, 32, "Item",ExpressionUUID->"328c2086-ad04-4777-8fca-349330ab56d6"],
+Cell[3041, 80, 213, 4, 35, "Text",ExpressionUUID->"4d05c24d-9b3c-450e-8869-e15918e4ea41"],
+Cell[3257, 86, 291, 6, 38, "CodeText",ExpressionUUID->"8d0676c6-1170-4ab4-9427-52aa2d5bd45e"],
+Cell[3551, 94, 504, 8, 73, "Input",ExpressionUUID->"512dcb97-052f-434b-86d0-eedcfeef80ee"],
+Cell[CellGroupData[{
+Cell[4080, 106, 255, 4, 67, "Section",ExpressionUUID->"ed8a7d53-f2bf-4ccf-ac2c-0bb641bd7da7"],
+Cell[4338, 112, 233, 4, 35, "Text",ExpressionUUID->"f351d147-2c71-4e75-8503-4812d9fd3995"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4608, 121, 252, 4, 67, "Section",ExpressionUUID->"b146c287-093e-4ce4-bf8b-fc1c63394988"],
+Cell[CellGroupData[{
+Cell[4885, 129, 250, 3, 30, "Input",ExpressionUUID->"6f9dcc92-bd17-4872-a306-71c269a07483"],
+Cell[5138, 134, 14878, 288, 63, "Output",ExpressionUUID->"20738795-42c3-465e-a991-e35f396b7213"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[20065, 428, 155, 3, 53, "Section",ExpressionUUID->"0fdb258a-ff70-4af1-8a81-24a0aa7fa9da"],
+Cell[CellGroupData[{
+Cell[20245, 435, 197, 2, 30, "Input",ExpressionUUID->"afda91bf-4c10-4cb6-a8c1-183c97c26624"],
+Cell[20445, 439, 13292, 263, 151, "Output",ExpressionUUID->"dac159a6-fdda-4ba9-bd14-973e646a41e9"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33786, 708, 315, 5, 67, "Section",ExpressionUUID->"b3b2a78c-44c3-460b-86ab-b0b33931b39c"],
+Cell[CellGroupData[{
+Cell[34126, 717, 156, 3, 54, "Subsection",ExpressionUUID->"e31b9a0b-3694-415f-b57b-6df6be9b9eb1"],
+Cell[CellGroupData[{
+Cell[34307, 724, 416, 8, 30, "Input",ExpressionUUID->"5addcaa4-11a1-472b-a741-60afd0208501"],
+Cell[34726, 734, 553, 9, 75, "Output",ExpressionUUID->"65aae349-6d3c-4ae6-b3d5-bd8d6c9f7615"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35316, 748, 233, 3, 30, "Input",ExpressionUUID->"bf68f7e5-7d6f-4b49-b009-a6f9f01a11ce"],
+Cell[35552, 753, 192, 2, 34, "Output",ExpressionUUID->"33479bd6-44e5-4517-b13c-e93a7e58b2f8"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35793, 761, 150, 2, 54, "Subsection",ExpressionUUID->"a302334d-33e7-4cc4-9be0-65a26496a274"],
+Cell[35946, 765, 651, 13, 30, "Input",ExpressionUUID->"eb165041-5cf3-44fe-84d0-1ed19d05bc91"],
+Cell[36600, 780, 511, 9, 30, "Input",ExpressionUUID->"eacdcb92-3bd4-49f3-8e4a-d8e4f3c127e1"],
+Cell[CellGroupData[{
+Cell[37136, 793, 264, 5, 30, "Input",ExpressionUUID->"81c3bc60-b0c4-414c-a59a-0ad5ebeb3a3c"],
+Cell[37403, 800, 14595, 350, 1783, "Output",ExpressionUUID->"80983d5b-79cc-41b1-b3ea-8ac508483630"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
