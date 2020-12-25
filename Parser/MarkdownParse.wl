@@ -8,7 +8,7 @@
 (*Parse a Markdown file into MarkdownElements (similar to XMLElement)*)
 
 
-(* ::Chapter::Closed:: *)
+(* ::Chapter:: *)
 (*Begin Package*)
 
 
@@ -19,7 +19,6 @@ ClearAll["MarkdownParse`*"];
 ClearAll["MarkdownParse`Private`*"];
 (* \[UpArrow] Can be removed in Production             \[UpArrow] *)
 MarkdownParse::usage="MarkdownParse[\*StyleBox[\"file . md\",\"TI\"]] Reads in markdown \*StyleBox[\"file . md\",\"TI\"], and parses to a list of nested MarkdownElements and text"
-MarkdownParseGrid::usage="MarkdownParseGrid[\*StyleBox[\"example\",\"TI\"]] returns a grid pairing the input string (or list of input strings), \*StyleBox[\"example\",\"TI\"], with its parse (or parses)"
 MarkdownElement::usage="Represents an element in Symbolic Markdown"
 $sampleStrings::usage="A set of strings used for testing"
 $MarkdownParsePrimitives::usage="A set of patterns for markdown primitives"
@@ -30,7 +29,7 @@ Begin["Private`"]
 (*Support Functions*)
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Tag Primitives*)
 
 
@@ -42,7 +41,7 @@ Begin["Private`"]
 (*After numerous issues with patterns, I've made use of patterns found here: https://gist.github.com/jbroadway/2836900*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Primitive Definitions*)
 
 
@@ -80,15 +79,15 @@ mdpInlineCode=RegularExpression["(`)([^`\n]+?)\\g1"]:> MarkdownElement["InlineCo
 
 
 (* ::Subsubsection::Closed:: *)
-(*LaTex*)
+(*LaTeX*)
 
 
-mdpTex1=RegularExpression["(\\$\\$)(.*)\\g1"]:> MarkdownElement["LaTex",<|"Type"-> "Display","Body"->"$2"|>];
-mdpTex2=RegularExpression["(\\\\\[)(\\s?)(.*)\\g2(\\\\\])"]:> MarkdownElement["LaTex",<|"Type"-> "Display","Body"->"$3"|>];
+mdpTex1=RegularExpression["(\\$\\$)(.*)\\g1"]:> MarkdownElement["LaTeX",<|"Type"-> "Display","Body"->"$2"|>];
+mdpTex2=RegularExpression["(\\\\\[)(\\s?)(.*)\\g2(\\\\\])"]:> MarkdownElement["LaTeX",<|"Type"-> "Display","Body"->"$3"|>];
 
-mdpTex3=RegularExpression["(\\$)(.*?)\\g1"]:> MarkdownElement["LaTex",<|"Type"-> "Inline","Body"->"$2"|>];
-mdpTex4=RegularExpression["(\\\()(\\s?)(.*?)\\g2(\\\))"]:> MarkdownElement["LaTex", <|"Type"-> "Inline","Body"->"$3"|>];
-mdpTex5=RegularExpression["(\\\\\\()(\\s?)(.*?)\\g2(\\\\\\))"]:> MarkdownElement["LaTex", <|"Type"-> "Inline","Body"->"$3"|>];
+mdpTex3=RegularExpression["(\\$)(.*?)\\g1"]:> MarkdownElement["LaTeX",<|"Type"-> "Inline","Body"->"$2"|>];
+mdpTex4=RegularExpression["(\\\()(\\s?)(.*?)\\g2(\\\))"]:> MarkdownElement["LaTeX", <|"Type"-> "Inline","Body"->"$3"|>];
+mdpTex5=RegularExpression["(\\\\\\()(\\s?)(.*?)\\g2(\\\\\\))"]:> MarkdownElement["LaTeX", <|"Type"-> "Inline","Body"->"$3"|>];
 
 
 (* ::Subsubsection::Closed:: *)
@@ -175,7 +174,7 @@ mdpOrderedListItem,mdpUnorderedItem,mdpBlockQuote,mdpCodeBlock,mdpCodeBlock2,mdp
 }
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Utilities*)
 
 
@@ -227,7 +226,7 @@ ExtractMarkdownFootnoteURL[ref_,footfile_]:=StringCases[footfile,RegularExpressi
 $sampleStrings={s1,s2,s3,s4,s5,s6,s7,s8,ff}
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*MarkdownTableStringSplit*)
 
 
@@ -322,10 +321,11 @@ MarkdownParser[m_MarkdownElement]:=m
 MarkdownParser[s__]:=Sequence[s]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*MarkdownParse*)
 
 
+MarkdownParse[file_File]:=MarkdownParse[Information[file]["FileName"]]
 MarkdownParse[file_String]/;FileExistsQ[file]:=Block[
 	{
 	footFile=ExtractAllMarkdownFootnotes[file],
